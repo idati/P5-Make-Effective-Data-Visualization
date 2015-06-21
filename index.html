@@ -1,0 +1,304 @@
+<html>
+<meta charset="utf-8">
+<head>
+<style>
+
+.chart rect {
+  fill: brown;
+}
+
+
+.axis {
+  font: 10px sans-serif;
+}
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.chart text {
+  fill: black;
+  font: 13px sans-serif;
+  font-weight:bold;
+  text-anchor: middle;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+}
+
+</style>
+</head>
+<body>
+<h2>The importance of school factors in explaining academic performance.</h2>
+<div class="wrapper">
+    <button id = "switch" style="display:none"></button>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script>
+
+function barchart() {
+
+
+var that = {};
+var data = null;
+
+var margin = {top: 90, right: 20, bottom: 30, left: 40},
+    width = 650 - margin.left - margin.right,
+    height = 450 - margin.top - margin.bottom;
+
+
+var svg = d3.select("body").append("svg")
+    .attr("class", "chart")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+
+
+that.setData = function(d) {
+      data = d;
+}
+
+that.getData = function(){
+      return data;
+}
+
+
+
+that.render = function(z) {
+   if (! data) return;
+
+d3.selectAll("h3")
+  .text("factor: "+z)
+
+x = d3.scale.ordinal()
+    .rangeRoundBands([0, width], .1);
+
+x.domain(data.map(function(d) { return d.label; }));
+
+y = d3.scale.linear()
+    .range([height, 0]);
+
+y.domain([0, d3.max(this.getData(), function(d) { return d.Math; })]);
+
+xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+yAxis = d3.svg.axis()
+    .scale(x)
+    .orient("middle");
+
+this.updateBars();
+this.updateTexty();
+this.updateAxis();
+this.updateHeader();
+};
+
+that.updateBars = function() {
+  // add axis
+
+
+
+  var bars = svg.selectAll(".bar")
+     .data(this.getData());
+   
+     bars.enter()
+ //        .append("g")
+ //        .attr("class", "container")
+         .append("rect")
+         .attr("class", "bar");
+ 
+     bars.exit().transition()
+         .duration(500)
+         .attr("height", 0)
+         .remove();
+
+     bars
+     .transition()
+     .duration(500) 
+     .attr("x", function(d) { return x(d.label); })
+     .attr("y", function(d) { return y(d.Math); })
+     .attr("height", function(d) { return height - y(d.Math); })
+     .attr("width", x.rangeBand());
+
+};
+
+that.updateTexty = function() {
+
+  var texty =  svg.selectAll(".ytext")
+                  .data(this.getData())
+
+      texty.enter()
+           .append("text")
+           .attr("class", "ytext");
+
+
+      texty.exit().transition()
+           .duration(500)
+           .attr("height", 0)
+           .remove()
+
+      texty
+      .transition()
+      .duration(500)
+      .attr("x", function(d) { return x(d.label)+x.rangeBand()/2})
+      .attr("y", function(d) { return y(d.Math) + 3; })
+      .attr("dy", ".75em")
+      .text(function(d) { return d.Math; });
+};
+
+that.updateHeader = function() {
+
+    var header = svg.selectAll(".theader")
+                    .data(this.getData())
+
+         header.enter()
+               .append("text")
+               .attr("class", "theader");
+
+         header.exit().transition()
+               .duration(500)
+               .attr("height", 0)
+               .remove()
+
+         header
+           .transition()
+           .duration(500)
+           .attr("x", function(d) { return 200; })
+           .attr("y", function(d) { return -40; })
+           .text(function(d) { return d.Header; });
+};
+
+that.updateAxis = function() {
+    svg.selectAll("g.x.axis")
+       .call(xAxis);
+};
+
+   return that;
+};
+</script>
+<script>
+
+c = barchart();
+var tmp = []
+var newData = null;
+var oldData = null;
+var Data3 = null;
+d3.csv("AtSchoolInternetConnection.csv", function(data) {
+data.forEach(function(d) {
+d.label = d.label;
+d.Math = +d.Math;
+d.Header = d.Header;
+tmp[0] = data;
+});
+});
+
+d3.csv("LearningStrategies.csv", function(data) {
+data.forEach(function(d) {
+d.label = d.label;
+d.Math = +d.Math;
+d.Header = d.Header;
+tmp[1] = data;
+});
+});
+
+
+d3.csv("SenseofBelonging.csv", function(data) {
+data.forEach(function(d) {
+d.label = d.label;
+d.Math = +d.Math;
+d.Header = d.Header;
+tmp[2] = data;
+});
+});
+
+d3.csv("TeacherExtraHelp.csv", function(data) {
+data.forEach(function(d) {
+d.label = d.label;
+d.Math = +d.Math;
+d.Header = d.Header;
+tmp[3] = data;
+});
+});
+
+d3.csv("StudentsListen.csv", function(data) {
+data.forEach(function(d) {
+d.label = d.label;
+d.Math = +d.Math;
+d.Header = d.Header;
+tmp[4] = data;
+});
+});
+
+d3.csv("WasteofTime.csv", function(data) {
+data.forEach(function(d) {
+d.label = d.label;
+d.Math = +d.Math;
+d.Header = d.Header;
+tmp[5] = data;
+});
+});
+
+d3.csv("seekExplanations.csv", function(data) {
+data.forEach(function(d) {
+d.label = d.label;
+d.Math = +d.Math;
+d.Header = d.Header;
+tmp[6] = data;
+});
+});
+
+var data_idx = 0;
+
+var data_interval = setInterval(function() {
+    c.setData(tmp[data_idx]);
+    c.render(data_idx);
+
+    data_idx++;
+ 
+    if(data_idx >= tmp.length) {
+        d3.selectAll("button") 
+          .attr("style","display:nline")
+          .text("Switch Data")
+        data_idx = 0;
+        clearInterval(data_interval);
+    }
+}, 3500); 
+
+
+
+var switched = false;
+var z = 0;
+d3.select('#switch').on('click', function() {
+     c.setData(tmp[z]);
+     c.render(z);
+     z = z+1;
+   if (z==tmp.length) {
+     z=0;
+     }
+});
+
+
+</script> 
+<h3></h3>
+</body>
+</html>
+
+
+
+
+
