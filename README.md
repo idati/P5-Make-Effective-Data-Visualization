@@ -5,6 +5,38 @@ Summary - The original data are from Acer (dataset 2012), by using google bigque
 
 The bar chart shows the students performance (I used PV1Math) on the y axis and the different answer possibilities on the x axis that are important to answer the question "The importance of school factors in explaining academic performance."
 
+
+
+Aid factor?
+
+(1) Is Internet connection available for you to use at school?
+
+
+Interest factor?
+
+(2) Describe Learning Strategies
+
+
+(7) I seek explanatuins of things
+
+
+Teacher factor?
+
+(4) how often do the teacher gives extra help?
+
+
+(5) My teacher gets students to listen to her
+
+
+
+Sozial/Attitude factor
+
+(3) I feel like an outsider (or left out of things) at school
+
+
+(6) School has been a waste of time
+
+
 Design - The decision to use bar chart was used because it is the easiest way to visualise two variables (student performance - have datatype integer and answers for different questions - have datatype string). When someone would ask why not Scatterplot I would answer, Scatterplot should be used when you have two variables with datatype integer to show some linear correlation. 
 [explain any design choices you made including changes to the visualization after collecting feedback]
 
