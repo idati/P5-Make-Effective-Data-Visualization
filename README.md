@@ -10,32 +10,32 @@ The bar chart shows the students performance (I used PV1Math) on the y axis and 
 Aid factor?
 
 (1) Is Internet connection available for you to use at school?
-
+    [AtSchoolInternetConnection.csv]
 
 Interest factor?
 
 (2) Describe Learning Strategies
-
+    [LearningStrategies.csv]
 
 (7) I seek explanatuins of things
-
+    [seekExolanations.csv]
 
 Teacher factor?
 
 (4) how often do the teacher gives extra help?
-
+    [TeacherExtraHelp.csv]
 
 (5) My teacher gets students to listen to her
-
+    [StudentsListen.csv]
 
 
 Sozial/Attitude factor
 
 (3) I feel like an outsider (or left out of things) at school
-
+    [SenseofBelonging.csv]
 
 (6) School has been a waste of time
-
+    [WasteofTime.csv]
 
 Design - The decision to use bar chart was used because it is the easiest way to visualise two variables (student performance - have datatype integer and answers for different questions - have datatype string). When someone would ask why not Scatterplot I would answer, Scatterplot should be used when you have two variables with datatype integer to show some linear correlation. 
 [explain any design choices you made including changes to the visualization after collecting feedback]
