@@ -1,10 +1,18 @@
-# P5-Make-Effective-Data-Visualization --> Link to the animation: http://130.211.86.23/project5/
+# P5-Make-Effective-Data-Visualization --> Link to the animation: http://130.211.86.23/chart3.html
 
 Summary - The original data are from Acer (dataset 2012), by using google bigquery I filter the important parts f.e. filtering "Openness for Problem Solving - Seek Explanations" i used the SQL query
-"SELECT ST94Q09, AVG(PV1MATH) as Math, AVG(PV1READ) as Read, AVG(PV1SCIE) as Scie, AVG(W_FSTUWT) as Weight FROM [pisaDataset2012] Group by ST94Q09" to filter the data.
+"SELECT ST94Q09, AVG(PV1MATH) as Math as Weight FROM [pisaDataset2012] Group by ST94Q09" to filter the data.
 
 The bar chart shows the students performance (I used PV1Math) on the y axis and the different answer possibilities on the x axis that are important to answer the question "The importance of school factors in explaining academic performance."
 
+Here are the questions that I used for creating the animation:
+ST77Q02 - Math Teaching - Extra help
+ST87Q01 - Sense of Belonging - Feel Like Outsider
+ST53Q02 - Learning Strategies- Improve Understanding vs. New Ways vs. Memory
+IC02Q04 - At school - Internet connection
+ST85Q01 - Classroom Management - Students Listen
+ST88Q02 - Attitude towards School - Waste of Time
+ST94Q09 - Openness for Problem Solving - Seek Explanations
 
 
 Aid factor?
@@ -38,9 +46,9 @@ Sozial/Attitude factor
     [WasteofTime.csv]
 
 Design - The decision to use bar chart was used because it is the easiest way to visualise two variables (student performance - have datatype integer and answers for different questions - have datatype string). When someone would ask why not Scatterplot I would answer, Scatterplot should be used when you have two variables with datatype integer to show some linear correlation. 
-[explain any design choices you made including changes to the visualization after collecting feedback]
 
-Feedback - [include all feedback you received from others on your visualization from the first sketch to the final visualization]
+Feedback - My first version showed only the seven different bar charts, the first feedback - The animation was confusing, what is the message. The second Feedback asked for the story. 
+From this two Feedback I added four Main factors, Aid factor, Interest factor, Teacher factor, Sozial/Attitude factor and also added some explaination to each chart. The last Feedback liked my animation.
 
 Resources:  
 [*] http://pisa2012.acer.edu.au/downloads.php
