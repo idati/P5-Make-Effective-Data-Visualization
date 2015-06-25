@@ -1,5 +1,4 @@
-"label","Math","Read","Scie","Header"
-"Yes - and I use it",495,494.8039086,499.8818065, Is Internet connection available for you to use at school?
-"Yes - but I don not use it",498,499.1842772,501.0819183
-"No",460,461.0356976,464.3370065^M
-"NA",436,441.6285116,444.7137255
+"label","Math","Read","Scie","Header","Header2"^M
+"Yes - and I use it",495,494.8039086,499.8818065,Having Internet makes a better performance,Question: Is Internet connection available for you to use at school?^M
+"Yes - but I don not use it",498,499.1842772,501.081918
+"No",460,461.0356976,464.3370065
