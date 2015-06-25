@@ -1,6 +1,5 @@
-label,Math,Read,Scie,Weight,Header
-Disagree,478,479.7742969,483.2200085,51.64465343,School has been a waste of time.
-Strongly disagree,481,489.5412139,489.3340103,51.45532342,
-Strongly agree,415,399.8105071,417.2790042,43.63798359,
-Agree,435,421.5643651,436.2373157,45.83131962,
-NA,464,465.0343083,469.3525599,51.11594092,
+label,Math,Read,Scie,Weight,Header,Header2
+Strongly agree,415,399.8105071,417.2790042,43.63798359,Children should do things for passion,Question : School has been a waste of time?
+Agree,435,421.5643651,436.2373157,45.83131962,,
+Disagree,478,479.7742969,483.2200085,51.64465343,,
+Strongly disagree,481,489.5412139,489.3340103,51.45532342,,
