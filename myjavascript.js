@@ -9,7 +9,7 @@
 */
 function barchart() {
 
-
+        // container for the chart
 	var that = {};
 	var data = null;
 
@@ -22,7 +22,7 @@ function barchart() {
 		, width = 650 - margin.left - margin.right
 		, height = 450 - margin.top - margin.bottom;
 
-
+       // in the html file, we use the left column in the table with two columns
 	var svg = d3.selectAll(".left")
 		.append("svg")
 		.attr("class", "chart")
@@ -50,7 +50,7 @@ function barchart() {
 		return data;
 	}
 
-
+        // set up the render of the chart
 	that.render = function (z, category) {
 		if (!data) return;
 
