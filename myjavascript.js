@@ -1,3 +1,12 @@
+/* 
+	the function barchart mange the animation with other subfunction, here are the most importants:
+		that.setData -> changes the data to another dataset
+		that.render ->  defines the x- and y axis 
+			that.updateBars -> updates the bars with the new dataset
+			that.updateTexty -> updates the text in y axis with the new data
+			that.updateHeader
+			that.updateAxis
+*/
 function barchart() {
 
 
@@ -39,10 +48,6 @@ function barchart() {
 
 	that.getData = function () {
 		return data;
-	}
-
-	that.getlength = function () {
-		return data.length;
 	}
 
 
@@ -95,7 +100,7 @@ function barchart() {
 
 	that.updateBars = function () {
 		// add axis
-
+                // Constructs a new ordinal scale with a range of twenty categorical colors for the bars
 		var color1 = d3.scale.category20();
 
 		var bars = svg.selectAll(".bar")
