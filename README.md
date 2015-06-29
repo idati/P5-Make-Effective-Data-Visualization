@@ -1,4 +1,7 @@
-# P5-Make-Effective-Data-Visualization --> Link to the animation: http://130.211.86.23/chart3.html
+# P5-Make-Effective-Data-Visualization
+
+#Link zur aktuellen Version: http://130.211.86.23/chart3.html
+#Link zur ersten Version: http://130.211.86.23/project5/
 
 Summary - The original data are from Acer (dataset 2012), by using google bigquery I filter the important parts f.e. filtering "Openness for Problem Solving - Seek Explanations" i used the SQL query
 "SELECT ST94Q09, AVG(PV1MATH) as Math as Weight FROM [pisaDataset2012] Group by ST94Q09" to filter the data.
