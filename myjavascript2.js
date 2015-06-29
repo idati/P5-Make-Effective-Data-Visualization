@@ -253,7 +253,7 @@ var data_interval = setInterval(
 				.attr("style"
 					, "visibility: hidden");
 		}
-
+                //  invoke the barchart function 
 		c.setData(tmp[data_idx]);
 		c.render(data_idx, category);
 
