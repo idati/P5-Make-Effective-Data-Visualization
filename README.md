@@ -45,7 +45,9 @@ Sozial/Attitude factor
 (6) School has been a waste of time
     [WasteofTime.csv]
 
-All files that where used in the first version are ending with *.vs1!
+All files that where used in the first version are ending with *.v1!
+
+The y-axis represents average values for all students.
 
 Design - The decision to use bar chart was used because it is the easiest way to visualise two variables (student performance - have datatype integer and answers for different questions - have datatype string). When someone would ask why not Scatterplot I would answer, Scatterplot should be used when you have two variables with datatype integer to show some linear correlation. 
 
