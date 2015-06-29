@@ -1,5 +1,5 @@
 /* 
-	the function barchart mange the animation with other subfunction, here are the most importants:
+	the function barchart manage the animation with other subfunction, here are the most importants:
 		that.setData -> changes the data to another dataset
 		that.render ->  defines the x- and y axis 
 			that.updateBars -> updates the bars with the new dataset
