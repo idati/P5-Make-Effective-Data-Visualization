@@ -4,12 +4,16 @@
 	At the end call the main function barchart, for the animation and for manuell navigation
 */
 c = barchart();
+// in the array tmp we save the different dataset
 var tmp = [];
+// in the array category we save the header text
 var category = [];
 var rightdata = [];
 var newData = null;
 var oldData = null;
 var Data3 = null;
+
+//start importing data from different csv files 
 d3.csv("AtSchoolInternetConnection.csv"
 	, function (data) {
 		data.forEach(function (d) {
@@ -101,7 +105,7 @@ var data = {
     }
 		, {
 			label: 'Disagree'
-			, values: [460, 463, 469, 483, 442
+			, values: [460, 458, 469, 483, 442
 				, 435]
     }
 		, {
@@ -239,6 +243,7 @@ legend.append('text')
 
 var data_idx = 0;
 
+//let the film start - start animation
 var data_interval = setInterval(
 	function () {
 
@@ -270,6 +275,7 @@ var data_interval = setInterval(
 
 var switched = false;
 var z = 0;
+// manuell changing the datat with button
 d3.select('#switch')
 	.on('click', function () {
 		c.setData(tmp[z]);
