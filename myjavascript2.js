@@ -1,3 +1,8 @@
+/*
+	In this js file the data will be saved from csv files into array on one hand and on the other hand the overview chart 
+	will be created (show all data in one chart).
+	At the end call the main function barchart, for the animation and for manuell navigation
+*/
 c = barchart();
 var tmp = [];
 var category = [];
@@ -15,16 +20,6 @@ d3.csv("AtSchoolInternetConnection.csv"
 			category[0] = "Aid factor";
 		});
 	});
-
-//d3.csv("LearningStrategies.csv", function(data) {
-//data.forEach(function(d) {
-//d.label = d.label;
-//d.Math = +d.Math;
-//d.Header = d.Header;
-//tmp[1] = data;
-//category[1] = "Interest factor";
-//});
-//});
 
 
 d3.csv("seekExplanations.csv", function (
@@ -83,7 +78,7 @@ d3.csv("WasteofTime.csv", function (
 			"Sozial/Attitude factor";
 	});
 });
-
+// Datatset with all information
 var data = {
 	labels: [
     'internet connection - Aid'
