@@ -65,3 +65,4 @@ Resources:
 [*] http://www.w3schools.com/
 [*] http://busypeoples.github.io/post/testing-d3-with-jasmine/
 [*] https://bigquery.cloud.google.com
+[*] http://bl.ocks.org/erikvullings/51cc5332439939f1f292
