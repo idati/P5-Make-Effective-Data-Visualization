@@ -50,6 +50,9 @@ Design - The decision to use bar chart was used because it is the easiest way to
 Feedback - My first version showed only the seven different bar charts, the first feedback - The animation was confusing, what is the message. The second Feedback asked for the story. 
 From this two Feedback I added four Main factors, Aid factor, Interest factor, Teacher factor, Sozial/Attitude factor and also added some explaination to each chart. The last Feedback liked my animation.
 
+For the auto format correction i used this free tool:
+http://www.freeformatter.com/html-formatter.html
+
 Resources:  
 [*] http://pisa2012.acer.edu.au/downloads.php
 [*] http://www.w3schools.com/
